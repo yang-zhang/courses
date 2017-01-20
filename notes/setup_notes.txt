@@ -1,0 +1,26 @@
+http://kbroman.org/github_tutorial/pages/fork.html
+git clone https://github.com/yang-zhang/courses.git
+git remote add fastai git://github.com/fastai/courses.git
+git remote -v
+
+-- aws 
+In the box: rm .bash_history
+
+pip install kaggle-cli
+
+kg config -g -u [user] -p [pw] -c dogs-vs-cats-redux-kernels-edition
+kg download
+
+sudo apt install unzip
+unzip train.zip
+unzip test.zip
+
+-- local
+Change to theano backend:
+open ~/.keras/keras.json and change to
+{
+    "image_dim_ordering": "th", 
+    "epsilon": 1e-07, 
+    "floatx": "float32", 
+    "backend": "theano"
+}
