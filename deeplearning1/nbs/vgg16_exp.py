@@ -210,12 +210,12 @@ class Vgg16():
             See Keras documentation: https://keras.io/models/model/
         """
         self.model.fit_generator(batches,
-                                 steps_per_epoch=batches.samples/batch_size,
+                                 steps_per_epoch=batches.samples//batch_size,
                                  # samples_per_epoch=batches.samples,
                                  epochs=epochs,
                 validation_data=val_batches,
                 # nb_val_samples=val_batches.samples,
-                validation_steps=val_batches.samples/batch_size,
+                validation_steps=val_batches.samples//batch_size,
                 )
 
 
