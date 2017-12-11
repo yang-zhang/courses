@@ -42,9 +42,8 @@ class Vgg16():
     """
 
 
-    def __init__(self, batch_size):
+    def __init__(self):
         self.FILE_PATH = 'http://files.fast.ai/models/'
-        self.batch_size = batch_size
         self.create()
         self.get_classes()
 
