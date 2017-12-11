@@ -42,8 +42,9 @@ class Vgg16():
     """
 
 
-    def __init__(self):
+    def __init__(self, batch_size):
         self.FILE_PATH = 'http://files.fast.ai/models/'
+        self.batch_size = batch_size
         self.create()
         self.get_classes()
 
@@ -204,7 +205,7 @@ class Vgg16():
                 validation_data=(val, val_labels), batch_size=batch_size)
 
 
-    def fit(self, batches, val_batches, nb_epoch=1, batch_size=batch_size):
+    def fit(self, batches, val_batches, nb_epoch=1, batch_size=self.batch_size):
         """
             Fits the model on data yielded batch-by-batch by a Python generator.
             See Keras documentation: https://keras.io/models/model/
