@@ -34,7 +34,11 @@ def VGG16_Avg(include_top=True, weights='imagenet',
     input_shape = _obtain_input_shape(input_shape,
                                       default_size=224,
                                       min_size=48,
+<<<<<<< HEAD
                                       data_format=K.image_dim_ordering(),
+=======
+                                      data_format=K.image_data_format(),
+>>>>>>> fe12a3a96d95a6aa02da8a14c0855c5fd8e67198
                                       require_flatten=include_top,
                                      )
 
